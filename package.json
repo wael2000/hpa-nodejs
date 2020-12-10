@@ -1,0 +1,28 @@
+{
+    "name": "hpa-nodejs",
+    "version": "0.0.1",
+    "description": "hpa-nodejs",
+    "main": "server.js",
+    "dependencies": {
+       "properties-reader": "^0.0.15"
+    },
+    "devDependencies": {
+      "nodemon": "*"
+    },
+    "engine": {
+      "node": "*",
+      "npm": "*"
+    },
+    "scripts": {
+      "dev": "nodemon --ignore node_modules/ server.js",
+      "start": "node server.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/wael2000/hpa-nodejs.git"
+    },
+    "keywords": [
+      "hpa"
+    ],
+    "author": "weldoami@redhat.com"
+  }
