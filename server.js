@@ -2,15 +2,6 @@ var http = require('http');
 var port = 8080;
 var ip = '0.0.0.0';
 
-function heavyTask(){
-  let count = 0;
-  for(let i=0;i < 50000000; i++){
-    count+=1;
-  }
-  console.log('Count is');
-  console.log(count);
-  return count;
-}
 function fibo(n) {
      if (n < 2)
          return 1;
@@ -22,17 +13,16 @@ var server = http.createServer(function (req, res) {
    if (req.url === "/") {
       req.on('end', function () {
          console.log("Invoked");
-         let result = heavyTask();
+         let result = fibo(5);
          res.writeHead(200, {'Content-Type': 'text/html'});
          res.write('<html><head><title></title></head>');
          res.write('<body>');
          res.write('<div>');
-         res.write('Hello World : ');
-         res.write( `${result}`);
+         res.write('Hello World');
          res.write('</div>');
          res.write('<div>');
          res.write('fibo : ');
-         res.write(`${fibo(10)}`);
+         res.write(`${result}`);
          res.write('</div>');
          res.write('</body>');
          res.write('</html>');
