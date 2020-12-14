@@ -32,7 +32,7 @@ var server = http.createServer(function (req, res) {
          res.write('</div>');
          res.write('<div>');
          res.write('fibo : ');
-         res.write(`${fibo(40)}`);
+         res.write(`${fibo(10)}`);
          res.write('</div>');
          res.write('</body>');
          res.write('</html>');
