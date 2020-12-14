@@ -13,7 +13,8 @@ var server = http.createServer(function (req, res) {
    if (req.url === "/") {
       req.on('end', function () {
          console.log("Invoked");
-         let result = fibo(8);
+         console.log(req.headers.num);
+         let result = fibo(req.headers.num);
          res.writeHead(200, {'Content-Type': 'text/html'});
          res.write('<html><head><title></title></head>');
          res.write('<body>');
