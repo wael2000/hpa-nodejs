@@ -4,25 +4,28 @@
     "description": "hpa-nodejs",
     "main": "server.js",
     "dependencies": {
-       "properties-reader": "^0.0.15"
+        "appmetrics": "^5.1.1",
+        "appmetrics-dash": "^5.3.0",
+        "node-report": "^2.2.11",
+        "properties-reader": "^0.0.15"
     },
     "devDependencies": {
-      "nodemon": "*"
+        "nodemon": "*"
     },
     "engine": {
-      "node": "*",
-      "npm": "*"
+        "node": "*",
+        "npm": "*"
     },
     "scripts": {
-      "dev": "nodemon --ignore node_modules/ server.js",
-      "start": "node server.js"
+        "dev": "nodemon --ignore node_modules/ server.js",
+        "start": "node async.js"
     },
     "repository": {
-      "type": "git",
-      "url": "https://github.com/wael2000/hpa-nodejs.git"
+        "type": "git",
+        "url": "https://github.com/wael2000/hpa-nodejs.git"
     },
     "keywords": [
-      "hpa"
+        "hpa"
     ],
     "author": "weldoami@redhat.com"
-  }
+}
