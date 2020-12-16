@@ -2,7 +2,7 @@
     "name": "hpa-nodejs",
     "version": "0.0.1",
     "description": "hpa-nodejs",
-    "main": "server.js",
+    "main": "async.js",
     "dependencies": {
         "appmetrics": "^5.1.1",
         "appmetrics-dash": "^5.3.0",
@@ -17,7 +17,7 @@
         "npm": "*"
     },
     "scripts": {
-        "dev": "nodemon --ignore node_modules/ server.js",
+        "dev": "nodemon --ignore node_modules/ async.js",
         "start": "node async.js"
     },
     "repository": {

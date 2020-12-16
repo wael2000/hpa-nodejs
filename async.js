@@ -31,7 +31,7 @@ const server = http.createServer();
 
 server.on('request', async (req, res) => 
 {
-    let arr = Array(5000000).fill("some string");
+    let arr = Array(1000000).fill("some string");
     const queryObject = url.parse(req.url,true).query;
     const data = await someAsyncFunc(queryObject.num);
     res.end(JSON.stringify(data));
