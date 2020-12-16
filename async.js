@@ -33,7 +33,10 @@ server.on('request', async (req, res) =>
 {
     let arr = Array(1000000).fill("some string");
     const queryObject = url.parse(req.url,true).query;
-    const data = await someAsyncFunc(queryObject.num);
+    let num = 5;
+    if (queryObject.num)
+        num=queryObject.num;
+    const data = await someAsyncFunc(num);
     res.end(JSON.stringify(data));
     arr.reverse();
 });
